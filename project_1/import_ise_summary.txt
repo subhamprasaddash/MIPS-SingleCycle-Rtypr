@@ -1,0 +1,187 @@
+*******************************************************************************
+*
+*                      IMPORT XISE SUMMARY REPORT
+*
+*                       (import_ise_summary.txt)
+*
+*  PLEASE READ THIS REPORT TO GET THE DETAILED INFORMATION ON THE DATA THAT
+*  WAS PARSED FROM THE ISE PROJECT AND IMPORTED INTO THE CURRENT PROJECT.
+*
+*
+* The report is divided into following three sections:-
+*
+* Section (1) - ISE PROJECT INFORMATION
+*
+*  This section provides the details of the ISE project that was imported
+*
+* Section (2) - EXCEPTIONS
+*
+*  This section summarizes the ISE project data that was either not imported or
+*  not mapped into the current project
+*
+* Section (3) - MAPPED DATA
+*
+*  This section summarizes the Vivado project information that was imported
+*  from the ISE project data
+*
+*******************************************************************************
+
+Section (1) - ISE PROJECT INFORMATION
+-------------------------------------
+
+The following items describes the information about the ISE project that was imported:-
+
+Project Name    = Assignment_1
+Project File    = D:/4-2/Comp Arch/Assignment_1/Assignment_1.xise
+Project Version = 14.7
+Device Family   = Spartan3E
+Part Name       = xc3s100e-5-vq100*
+
+*This part is not supported in Vivado and is replaced with the default part in the new project.
+ Please see Section (3.1) - "Target Device" below for more details.
+
+
+Section (2) - EXCEPTIONS
+------------------------
+
+The following sub-sections describes the list of items that were NOT mapped from the
+XISE file contents into the current project:-
+
+Section (2.1) - Missing Sources
+-------------------------------
+None
+
+
+Section (2.2) - Unknown Sources
+-------------------------------
+None
+
+
+Section (2.3) - IP Import Issues
+--------------------------------
+None
+
+
+Section (2.4) - Unknown Properties
+----------------------------------
+
+The following ISE properties were not mapped into the current project:-
+
+Note: The "Property Specification in Project File" property in the ISE project was set to "Store non-default values only".
+      To make the ISE default properties available for import into Vivado, please set the value to "Store all values" in
+      ISE Project Design Properties and create a new project.
+
+<ISE Property Name>  <ISE Property Value>
+None
+
+
+Section (3) - MAPPED DATA
+-------------------------
+
+The following sub-sections describes the list of items that were imported from the
+ISE properties and sources and mapped into the current project:-
+
+Section (3.1) - Target Device
+-----------------------------
+
+Default Part = xc7k70tfbv676-1
+Family       = kintex7
+Package      = fbv676
+Speed Grade  = -1
+
+
+Section (3.2) - Filesets
+------------------------
+
+<sources_1>
+FILESET_TYPE   = DesignSrcs
+TOP            = alu
+DESIGN_MODE    = RTL
+VERILOG_DIR    = 
+VERILOG_DEFINE = 
+VHDL_GENERICS  = 
+
+File(s):-
+NAME      = alu.v
+FILE PATH = D:/4-2/Comp Arch/Assignment_1/alu.v
+FILE_TYPE = Verilog
+LIBRARY   = xil_defaultlib
+
+NAME      = instr_mem.v
+FILE PATH = D:/4-2/Comp Arch/Assignment_1/instr_mem.v
+FILE_TYPE = Verilog
+LIBRARY   = xil_defaultlib
+
+NAME      = instr_fetch.v
+FILE PATH = D:/4-2/Comp Arch/Assignment_1/instr_fetch.v
+FILE_TYPE = Verilog
+LIBRARY   = xil_defaultlib
+
+NAME      = sign_extend.v
+FILE PATH = D:/4-2/Comp Arch/Assignment_1/sign_extend.v
+FILE_TYPE = Verilog
+LIBRARY   = xil_defaultlib
+
+NAME      = shft.v
+FILE PATH = D:/4-2/Comp Arch/Assignment_1/shft.v
+FILE_TYPE = Verilog
+LIBRARY   = xil_defaultlib
+
+NAME      = mux.v
+FILE PATH = D:/4-2/Comp Arch/Assignment_1/mux.v
+FILE_TYPE = Verilog
+LIBRARY   = xil_defaultlib
+
+
+<constrs_1>
+FILESET_TYPE   = Constrs
+
+Note: During the import operation, any constraint file(s) that are found in the ISE project will be added to the current Vivado project.
+      However, please note that none of these files will be automatically marked as a "Target Constraint File". To set a constraint file
+      as target, select the file in the GUI "Sources" window, right-click on this file and then select "Set Target UCF". Alternatively,
+      the target constraint file can be set using the "set_property target_constrs_file <filename> <fileset>" Tcl command.
+
+File(s):-
+None
+
+<sim_1>
+FILESET_TYPE   = SimulationSrcs
+
+File(s):-
+None
+
+Section (3.3) - Design Runs(s)
+------------------------------
+
+<synth_1>
+FLOW      = Vivado Synthesis 2018
+PART      = xc7k70tfbv676-1
+SRCSET    = sources_1
+CONSTRSET = constrs_1
+STRATEGY  = Vivado Synthesis Defaults
+
+Options:-
+
+Note: The current run uses Vivado Strategies; hence no ISE run options will be mapped to this run during the import operation.
+
+
+
+<impl_1>
+FLOW      = Vivado Implementation 2018
+PART      = xc7k70tfbv676-1
+SRCSET    = sources_1
+CONSTRSET = constrs_1
+STRATEGY  = Vivado Implementation Defaults
+
+Options:-
+
+Note: The current run uses Vivado Strategies; hence no ISE run options will be mapped to this run during the import operation.
+
+
+
+<sim_1>
+TOP  = 
+SOURCE_SET  = sources_1
+
+Options:-
+        
